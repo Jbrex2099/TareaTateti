@@ -28,9 +28,9 @@ class Juego {
 	// verifica que haya terminado por tablero completo
 	bool checkTermino();
 	// imprime ganador
-	void imprimirGanador(bool);
+	void imprimirGanador(bool turno1=true);
 	// imprime juego finalizado
-	void imprimirTerminar(bool);
+	void imprimirTerminar(bool turno1=true);
 	// imprime cabecera
 	void imprimirCabecera();
 	
