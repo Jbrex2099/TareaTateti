@@ -21,7 +21,7 @@ public:
 	// muestra el tablero
 	void mostrar();
 	// retorna si hay una ficha en esa posicion
-	bool hayFicha(int,int);
+	bool hayFicha(int x, int y);
 	// compara una dos posiciones retorna true si son iguales
 	bool compararFichas(int,int,int,int);
 	// retorna true si el tablero esta completo

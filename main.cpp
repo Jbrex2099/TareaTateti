@@ -14,15 +14,15 @@ void imprimirCabecera() {
 
 void imprimirTablero(){
 	Tablero T;
+	T.setFichaIn(0,0,' ');
+	T.setFichaIn(0,1,' ');
+	T.setFichaIn(0,2,' ');
+	T.setFichaIn(1,0,' ');
 	T.setFichaIn(1,1,' ');
 	T.setFichaIn(1,2,' ');
-	T.setFichaIn(1,3,' ');
+	T.setFichaIn(2,0,' ');
 	T.setFichaIn(2,1,' ');
 	T.setFichaIn(2,2,' ');
-	T.setFichaIn(2,3,' ');
-	T.setFichaIn(3,1,' ');
-	T.setFichaIn(3,2,' ');
-	T.setFichaIn(3,3,' ');
 	T.mostrar();
 }
 	
@@ -89,43 +89,50 @@ void imprimirTablero(){
 			return tecla;
 		}
 			
-			void insertKey(int K){
+			void insertKey(int K, int turnos){
 				Tablero T;
+				char letra;
+				if (turnos%2==0){
+					letra = 'X';
+				}
+				else{
+					letra = 'O';
+				}
 				switch(K){
 				case 1:
-					T.setFichaIn(1,1,'X');
+					T.setFichaIn(0,0,letra);
 					T.mostrar();
 					break;
 				case 2:
-					T.setFichaIn(1,2,'X');
+					T.setFichaIn(0,1,letra);
 					T.mostrar();
 					break;
 				case 3:
-					T.setFichaIn(1,3,'X');
+					T.setFichaIn(0,2,letra);
 					T.mostrar();
 					break;
 				case 4:
-					T.setFichaIn(2,1,'X');
+					T.setFichaIn(1,0,letra);
 					T.mostrar();
 					break;
 				case 5:
-					T.setFichaIn(2,2,'X');
+					T.setFichaIn(1,1,letra);
 					T.mostrar();
 					break;
 				case 6:
-					T.setFichaIn(2,3,'X');
+					T.setFichaIn(1,2,letra);
 					T.mostrar();
 					break;
 				case 7:
-					T.setFichaIn(3,1,'X');
+					T.setFichaIn(2,0,letra);
 					T.mostrar();
 					break;
 				case 8:
-					T.setFichaIn(3,2,'X');
+					T.setFichaIn(2,1,letra);
 					T.mostrar();
 					break;
 				case 9:
-					T.setFichaIn(3,3,'X');
+					T.setFichaIn(2,2,letra);
 					T.mostrar();
 					break;
 				}
@@ -140,7 +147,7 @@ void imprimirTablero(){
 
 			imprimirOpciones();
 			int K = getKey();
-			insertKey(K);
+			insertKey(K, turnos);
 			turnos++;
 			}
 			return 0;

@@ -8,27 +8,28 @@ Tablero::Tablero() {
 }
 
 void Tablero::setFichaIn(int x, int y, char c){
-	mapa[x][y] = c;
+	mapa[x][y].setFigura(c);
 }
 
 void Tablero::mostrar() {
+	int posicion=1;
 	cout<<"    A   B   C"<<endl;
 	cout<<"  -------------"<<endl;
-	for (int i = 1; i<=3; i++){
-		cout<<i;
+	for (int i = 0; i<3; i++){
+		cout<<posicion;
 		cout<<" | ";
 		
-		for (int j = 1; j<=3; j++){
+		for (int j = 0; j<3; j++){
 			cout<<mapa[i][j].getFigura()<< " | ";
 		}
 		cout<<endl;
 		cout<<"  -------------"<<endl;
-		
+		posicion++;
 	}
 }
 
 //bool Tablero::hayFicha(int x, int y) {
-
+	//return;
 //}
 
 //bool Tablero::compararFichas(int x0,int y0,int x1 ,int y1){}
