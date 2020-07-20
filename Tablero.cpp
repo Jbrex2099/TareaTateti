@@ -29,7 +29,11 @@ void Tablero::mostrar() {
 }
 
 //bool Tablero::hayFicha(int x, int y) {
-	//return;
+	//for(int i = 0; i<3; i++){
+		//for (int j = 0; j<3; j++){
+		//if(mapa[i][j]==
+		//}
+	//}
 //}
 
 //bool Tablero::compararFichas(int x0,int y0,int x1 ,int y1){}

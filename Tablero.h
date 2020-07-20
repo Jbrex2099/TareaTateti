@@ -14,6 +14,7 @@ using namespace std;
 class Tablero {
 private:
 	Ficha mapa[3][3];
+	Ficha verificar[3][3];
 public:
 	Tablero();
 	// ubica una ficha en una posicion

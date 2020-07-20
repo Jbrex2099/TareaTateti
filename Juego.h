@@ -9,7 +9,7 @@ class Juego {
 	
 	char jugador1;
 	char jugador2;
-	Tablero miTablero;
+	Tablero T;
 	
 	// posiciona una ficha
 	void setFichaIn(int x, int y, char c);
@@ -22,7 +22,7 @@ class Juego {
 	// evento de tecla
 	int getKey();
 	// imprime una tecla en el tablero
-	void insertKey(int k,char c);
+	void insertKey(int, int);
 	// verifica que se haya formado tateti
 	bool checkTateti();
 	// verifica que haya terminado por tablero completo
@@ -32,7 +32,8 @@ class Juego {
 	// imprime juego finalizado
 	void imprimirTerminar(bool turno1=true);
 	// imprime cabecera
-	void imprimirCabecera();
+	void imprimirCabecera(int);
+
 	
 public:
 	Juego();
