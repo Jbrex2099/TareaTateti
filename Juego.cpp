@@ -175,16 +175,9 @@ void Juego::insertKey(int K, int turnos){
 	turnos ++;
 }
 
-//bool Juego::checkTateti(){
-	//if(setFichaIn(0,0)==setFichaIn(0,1)){
 
-	//}
-//}
-
-//bool Juego::checkTermino(){}
 
 void Juego::imprimirTablero() {
-	Tablero T;
 	T.setFichaIn(0,0,' ');
 	T.setFichaIn(0,1,' ');
 	T.setFichaIn(0,2,' ');

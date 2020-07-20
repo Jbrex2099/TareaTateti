@@ -28,6 +28,17 @@ void Tablero::mostrar() {
 	}
 }
 
+bool Tablero::checkTateti(){
+	bool victoria = false;
+	if((compararFichas(0,0))==(compararFichas(0,1))&&(compararFichas(0,1))==(compararFichas(0,2))){
+		return victoria = true;
+	}
+		return victoria;
+}
+
+
+//bool Juego::checkTermino(){}
+
 //bool Tablero::hayFicha(int x, int y) {
 	//for(int i = 0; i<3; i++){
 		//for (int j = 0; j<3; j++){
