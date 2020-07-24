@@ -38,7 +38,6 @@ bool Tablero::compararFichas(int x, int y){
 bool Tablero::checkTateti(){
 	bool victoria = false;
 	if((compararFichas(0,0))==(compararFichas(0,1))&&(compararFichas(0,1))==(compararFichas(0,2))){
-		cout<<"eyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
 		return victoria = true;
 	}
 	if((compararFichas(1,0))==(compararFichas(1,1))&&(compararFichas(1,1))==(compararFichas(1,2))){

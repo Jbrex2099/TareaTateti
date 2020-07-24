@@ -36,7 +36,7 @@ void Juego::play() {
 	imprimirOpciones();
 	int K=getKey();
 	insertKey(K, turnos);
-	
+	T.checkTateti();
 	//Juego::imprimirGanador();
 	//Juego::imprimirTerminar();
 	turnos ++;
