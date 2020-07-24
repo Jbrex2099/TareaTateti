@@ -28,6 +28,10 @@ void Tablero::mostrar() {
 	}
 }
 
+bool Tablero::compararFichas(int x, int y){
+	return mapa[x][y].compare(f);
+}
+
 bool Tablero::checkTateti(){
 	bool victoria = false;
 	if((compararFichas(0,0))==(compararFichas(0,1))&&(compararFichas(0,1))==(compararFichas(0,2))){
