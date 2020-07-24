@@ -36,6 +36,7 @@ void Juego::play() {
 	imprimirOpciones();
 	int K=getKey();
 	insertKey(K, turnos);
+	
 	//Juego::imprimirGanador();
 	//Juego::imprimirTerminar();
 	turnos ++;

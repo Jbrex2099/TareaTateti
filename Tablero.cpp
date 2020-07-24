@@ -5,6 +5,7 @@
 #include "Tablero.h"
 
 Tablero::Tablero() {
+	
 }
 
 void Tablero::setFichaIn(int x, int y, char c){
@@ -29,12 +30,36 @@ void Tablero::mostrar() {
 }
 
 bool Tablero::compararFichas(int x, int y){
+	Ficha f;
+	f.setFigura('X');
 	return mapa[x][y].compare(f);
 }
 
 bool Tablero::checkTateti(){
 	bool victoria = false;
 	if((compararFichas(0,0))==(compararFichas(0,1))&&(compararFichas(0,1))==(compararFichas(0,2))){
+		cout<<"eyyyyyyyyyyyyyyyyyyyyyyyyyyyy";
+		return victoria = true;
+	}
+	if((compararFichas(1,0))==(compararFichas(1,1))&&(compararFichas(1,1))==(compararFichas(1,2))){
+		return victoria = true;
+	}
+	if((compararFichas(2,0))==(compararFichas(2,1))&&(compararFichas(2,1))==(compararFichas(2,2))){
+		return victoria = true;
+	}
+	if((compararFichas(0,0))==(compararFichas(1,0))&&(compararFichas(1,0))==(compararFichas(2,0))){
+		return victoria = true;
+	}
+	if((compararFichas(0,1))==(compararFichas(1,1))&&(compararFichas(1,1))==(compararFichas(2,2))){
+		return victoria = true;
+	}
+	if((compararFichas(0,2))==(compararFichas(1,2))&&(compararFichas(1,2))==(compararFichas(2,2))){
+		return victoria = true;
+	}
+	if((compararFichas(0,0))==(compararFichas(1,1))&&(compararFichas(1,1))==(compararFichas(2,2))){
+		return victoria = true;
+	}
+	if((compararFichas(0,2))==(compararFichas(1,1))&&(compararFichas(1,1))==(compararFichas(2,0))){
 		return victoria = true;
 	}
 		return victoria;
