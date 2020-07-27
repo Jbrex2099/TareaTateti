@@ -23,14 +23,12 @@ class Juego {
 	int getKey();
 	// imprime una tecla en el tablero
 	void insertKey(int, int);
-	// verifica que se haya formado tateti
-	bool checkTateti();
 	// verifica que haya terminado por tablero completo
 	bool checkTermino();
 	// imprime ganador
-	void imprimirGanador(bool turno1=true);
+	void imprimirGanador(int turnos);
 	// imprime juego finalizado
-	void imprimirTerminar(bool turno1=true);
+	void imprimirTerminar();
 	// imprime cabecera
 	void imprimirCabecera(int);
 

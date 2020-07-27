@@ -36,8 +36,11 @@ void Juego::play() {
 	imprimirOpciones();
 	int K=getKey();
 	insertKey(K, turnos);
-	T.checkTateti();
-	//Juego::imprimirGanador();
+	bool ganar=T.checkTateti();
+	while(ganar==true){
+	imprimirGanador(turnos);
+	ganar=false;
+	}
 	//Juego::imprimirTerminar();
 	turnos ++;
 	}
@@ -55,13 +58,18 @@ void Juego::imprimirCabecera(int turnos) {
 	cout<<"seleccione donde colocar una ficha"<<endl;
 }
 
-void Juego::imprimirGanador(bool turno1) {
-	cout<<"ha ganado el jugador 1"<<endl;
+void Juego::imprimirGanador(int turnos) {
+	if(turnos%2==0){
+		cout<<"ha ganado el jugador 2"<<endl;
+	}
+	else{
+		cout<<"ha ganado el jugador 1"<<endl;
+	}
 }
 
-void Juego::imprimirTerminar(bool turno1) {
-	cout<<"ha terminado el juego"<<endl;
-}
+//void Juego::imprimirTerminar(bool turno1) {
+	//cout<<"ha terminado el juego"<<endl;
+//}
 
 void Juego::imprimirOpciones() {
 	cout<<"A1 presione 1."<<endl;
