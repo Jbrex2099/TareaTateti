@@ -67,12 +67,8 @@ bool Tablero::checkTateti(){
 
 //bool Juego::checkTermino(){}
 
-//bool Tablero::hayFicha(int x, int y) {
-	//for (int i=0; i<3; i++){
-		//for(int j=0; i<3; j++){
-			//mapa[x][y]=true;
-		//}
-	//}
-//}
+bool Tablero::hayFicha(int x, int y) {
+	return mapa[x][y].getFigura() != ' ';
+}
 
 //bool Tablero::isComplete(){}
